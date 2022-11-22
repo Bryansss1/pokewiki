@@ -278,7 +278,6 @@ list-style: none;
     font-size: 1.9rem;
     color: rgb(250, 249, 249);
     text-shadow: $shadowtext ;
-    box-shadow: 2px 2px 200px 10px black;
 }
 
 .details-father{
@@ -290,7 +289,8 @@ list-style: none;
         list-style: none;
     }
 .details{
-    padding-top: 2rem;
+    padding-top: 2rem; 
+    text-shadow: 2px 2px 7px rgb(4, 255, 4);
     li{
         border-bottom: 2px solid;
         margin-bottom: .3rem;
@@ -299,8 +299,7 @@ list-style: none;
     background-image: url(https://i.pinimg.com/736x/6e/52/e0/6e52e0a37e4194b7766ffbde181a0434.jpg);
     background-size: cover;
     border-radius: 5%;
-    color: black;
-    text-shadow: 2px 2px 7px rgb(255, 253, 253);
+    color: rgb(0, 0, 0);
     width: 90%;
     max-width: 25rem;
     display: flex;
@@ -322,7 +321,6 @@ list-style: none;
 
   .stats{
     color: black;
-    text-shadow: 2px 2px 7px rgb(255, 253, 253);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -345,7 +343,6 @@ list-style: none;
   }
   .hability{
     color: black;
-    text-shadow: 2px 2px 7px rgb(255, 253, 253);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -382,7 +379,6 @@ list-style: none;
         overflow: auto;
         li{
             margin-top: .4rem;
-            border-bottom: 2px solid blue;
         }
      }
  }
