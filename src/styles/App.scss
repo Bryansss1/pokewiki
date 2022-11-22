@@ -89,25 +89,6 @@ width: 100px;
             box-shadow: 2px 4px 7px 2px rgb(255, 0, 0);
             transform: scale(1.1);
         }
-    .link-nav ul{
-        font-size: 1.2rem;
-        display: flex;
-        list-style: none;
-        align-items: center;
-        justify-content: space-evenly;
-        padding: 1rem 0;
-        background-image: url(https://www.wallpaperflare.com/static/364/185/316/pok%C3%A9mon-pok%C3%A9-balls-artwork-pokeball-wallpaper.jpg);
-        background-size: contain;
-        a{
-            text-decoration: none;
-            text-shadow: $shadowtext;
-            color: $color-ligth;
-            transition: all .1s;
-        }
-        a:hover{
-            border-bottom: 3px solid black;
-        }
-    }
 
     .buscador-nav{
         display: flex;
@@ -373,11 +354,16 @@ list-style: none;
     border: 2px solid;
     border-top-left-radius: 10%;
     border-top-right-radius: 10%;
+    
     h3{
     text-shadow: $shadowtext;
     color: $color-ligth;
+    width: 100%;
+    text-align: center;
+    border-bottom: 3px solid black;
     }
      ul{
+        background-color: rgba(255, 255, 255, 0.767);
         list-style: none;
         text-align: center;
         height: 10rem;
@@ -411,7 +397,31 @@ li{
     max-width: 20rem;
     margin: auto;
     display: flex;
+    padding-top: 2rem;
 }
+
+.link-nav ul{
+    font-size: 1.2rem;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+    background-image: url(https://www.wallpaperflare.com/static/364/185/316/pok%C3%A9mon-pok%C3%A9-balls-artwork-pokeball-wallpaper.jpg);
+    background-size: contain;
+    a{
+        text-decoration: none;
+        text-shadow: $shadowtext;
+        color: $color-ligth;
+        transition: all .1s;
+    }
+    a:hover{
+        border-bottom: 3px solid black;
+    }
+}
+
+
+
 
 @media screen and (min-width:450px){
     .home-inicio{

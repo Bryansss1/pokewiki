@@ -3,6 +3,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const CharaDetails = () => {
     const {id}=useParams()
@@ -13,9 +14,28 @@ axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
 .then(res=>setCharade(res.data))
 },[])
 
+const mostrarName=()=>{
+    Swal.fire({
+        imageUrl:"https://www.wallpaperflare.com/static/364/185/316/pok%C3%A9mon-pok%C3%A9-balls-artwork-pokeball-wallpaper.jpg",
+        imageHeight:200,
+        html:`Welcome to the pokeapi <b>"${userState}"</b> this includes all pokemon , creator by bryansss :3 <a href="https://github.com/Bryansss1?tab=repositories" target="_blank" ><i class='bx bxl-github bx-md'></i></a>`,
+        confirmButtonColor:"green",
+    })
+}
+
+
 console.log(detailChara)
     return (
         <section className='details-father'>
+
+             <nav className='link-nav'>
+                    <ul>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/characters">Characters</Link></li>
+                        <li><Link onClick={mostrarName}>About us</Link></li>
+                    </ul>
+              </nav> 
+
             <img className='title-details' src="https://www.freepnglogos.com/uploads/gotta-catch-em-all-transparent-pokemon-logo-11.png"/>
             <article className='details'>
                 <div className='name-details'>
