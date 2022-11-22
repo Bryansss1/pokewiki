@@ -1,0 +1,440 @@
+@import "./reset.scss";
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Secular One', sans-serif;
+}
+
+.home-inicio{
+font-size: 1.3rem;
+width: 100%;
+height: 100vh;
+background-image: url(https://i.pinimg.com/originals/9f/b4/22/9fb422482ab6be8c64a12184d4088d90.jpg);
+background-size:cover;
+background-repeat: no-repeat;
+color:$color-ligth;
+font-family: 'Secular One', sans-serif;
+text-shadow: $shadowtext;
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10rem;
+    gap: 1rem;
+    text-align: center;
+    font-family: 'Secular One', sans-serif;
+}
+button{
+    font-family: 'Secular One', sans-serif;
+    border: none;
+    background-image: url(https://www.wallpaperflare.com/static/364/185/316/pok%C3%A9mon-pok%C3%A9-balls-artwork-pokeball-wallpaper.jpg);
+    box-shadow: 2px 2px 10px 2px black;
+    border-radius: 10%;
+    margin-left: 1rem;
+    background-size: cover;
+    color: $color-ligth;
+    transition: all .2s;
+    cursor: pointer;
+}
+button:hover{
+    transform: scale(1.2);
+}
+input{
+
+background-size:contain;
+font-weight: 900;
+border: 2px solid black;
+border-bottom:2px solid red;
+border-top:2px solid rgb(202, 202, 202) ;
+border-radius: 10%;
+transition: all .2s;
+}
+input:focus{
+    box-shadow: 2px 4px 7px 2px rgb(255, 0, 0);
+    transform: scale(1.1);
+}
+.pika{
+width: 100px;
+
+}
+.user{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+}
+
+.characters-pages{
+    input{
+        font-weight: 900;
+        border: 2px solid black;
+        border-bottom:2px solid red;
+        border-top:2px solid rgb(202, 202, 202) ;
+        border-radius: 10%;
+        transition: all .2s;
+        }
+        input:focus{
+            box-shadow: 2px 4px 7px 2px rgb(255, 0, 0);
+            transform: scale(1.1);
+        }
+    .link-nav ul{
+        font-size: 1.2rem;
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 1rem 0;
+        background-image: url(https://www.wallpaperflare.com/static/364/185/316/pok%C3%A9mon-pok%C3%A9-balls-artwork-pokeball-wallpaper.jpg);
+        background-size: contain;
+        a{
+            text-decoration: none;
+            text-shadow: $shadowtext;
+            color: $color-ligth;
+            transition: all .1s;
+        }
+        a:hover{
+            border-bottom: 3px solid black;
+        }
+    }
+
+    .buscador-nav{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 1rem 0;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+        width: 100%;
+        background: rgba(117, 112, 112, 0.37);
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: $color-ligth;
+        text-shadow: $shadowtext;
+        margin-bottom: 2rem;
+        input{
+            margin-right: 1rem;
+            border-radius: 5%;
+            border: 2px solid;
+        }
+        button{
+            margin-right: .5rem;
+            font-family: 'Secular One', sans-serif;
+            border: none;
+            background-image: url(https://www.wallpaperflare.com/static/364/185/316/pok%C3%A9mon-pok%C3%A9-balls-artwork-pokeball-wallpaper.jpg);
+            box-shadow: 2px 2px 10px 2px black;
+            border-radius: 10%;
+            background-size: cover;
+            color: $color-ligth;
+            transition: all .2s;
+            cursor: pointer;
+            border: 2px solid black;
+        }
+        button:hover{
+            transform: scale(1.2);
+        }
+        .pokebus{
+            width: 4rem;
+            
+        }
+        select{
+            margin: .3rem 0;
+            background-color: aliceblue;
+            border: none;
+            border-radius: 5%;
+        }
+        .pokebuss{
+            display: flex;
+            text-align: center;
+            align-items: center;
+        }
+    }
+    .buttons-pages{
+        display: flex;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 3rem 0;
+        gap: 1rem;
+        ul{
+            display: flex;
+            list-style: none;
+        }
+        button{
+                width: 2rem;
+                background-color: rgb(255, 0, 0);
+                color: $color-ligth;
+                border: solid 1px black;
+                border-radius: 10%;
+                margin-left: .2rem;
+                cursor: pointer;
+                box-shadow: 2px 2px 40px 2px red;
+         }
+    }
+}
+
+.box-cards{
+    width: 97%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr ;
+    gap: 1rem;
+.card-poke {
+display: flex;
+align-items: center;
+text-align: center;
+justify-content: center;
+list-style: none;
+background-image: url(https://i.pinimg.com/originals/fd/72/1f/fd721f81cf12ebf7b3234c2c665b584c.png);
+background-size: cover;
+border: 4px solid rgb(255, 255, 255);
+border-bottom-right-radius:5rem ;
+border-top-left-radius:5rem ;
+color: $color-ligth;
+text-shadow: $shadowtext;
+position: relative;
+transition: all .4s;
+.ids{
+    color: red;
+}
+img{
+width: 10rem;
+}
+button{
+    font-family: 'Secular One', sans-serif;
+    border: none;
+    background-image: url(https://www.wallpaperflare.com/static/364/185/316/pok%C3%A9mon-pok%C3%A9-balls-artwork-pokeball-wallpaper.jpg);
+    box-shadow: 2px 2px 10px 2px black;
+    border-radius: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $color-ligth;
+    transition: all .2s;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+button:focus{
+    transform: scale(1.2);
+}
+}
+.card-poke ul{
+list-style: none;
+}
+.card-poke:hover{
+    animation: card 2s infinite;
+    box-shadow: 2px 2px 7px 7px rgb(255, 0, 0);
+}
+}
+
+
+@keyframes card{
+    0%{
+           top: 1rem;
+           box-shadow: 2px 2px 7px 7px rgb(255, 250, 250);
+    }
+    50%{
+        top: 0rem;
+        box-shadow: 2px 2px 7px 7px rgb(255, 0, 0);
+    }
+    100%{
+        top: 1rem;
+        box-shadow: 2px 2px 7px 7px rgb(247, 247, 247); 
+}
+}
+
+@keyframes luces{
+0%{
+        box-shadow: 2px 2px 70px 7px rgb(255, 250, 250);
+ }
+ 25%{
+        box-shadow: 2px 2px 70px 7px rgb(10, 0, 0);
+ }
+ 40%{
+     box-shadow: 2px 2px 70px 7px rgb(255, 0, 0);
+ }
+ 65%{
+    box-shadow: 2px 2px 70px 7px rgb(255, 255, 255);
+ }
+ 80%{
+     box-shadow: 2px 2px 70px 7px rgb(2, 0, 0); 
+}
+100%{
+    box-shadow: 2px 2px 70px 7px rgb(248, 0, 0);
+
+}
+}
+
+
+.darkmode{
+    font-size: 1.9rem;
+    color: rgb(250, 249, 249);
+    text-shadow: $shadowtext ;
+    box-shadow: 2px 2px 200px 10px black;
+}
+
+.details-father{
+    background-image: url(https://www.wallpapertip.com/wmimgs/81-813546_rotom-pokedex-background.jpg);
+    background-size: cover;
+    width: 100%;
+
+    ul{
+        list-style: none;
+    }
+.details{
+    padding-top: 2rem;
+    li{
+        border-bottom: 2px solid;
+        margin-bottom: .3rem;
+    }
+  .name-details{
+    background-image: url(https://i.pinimg.com/736x/6e/52/e0/6e52e0a37e4194b7766ffbde181a0434.jpg);
+    background-size: cover;
+    border-radius: 5%;
+    color: black;
+    text-shadow: 2px 2px 7px rgb(255, 253, 253);
+    width: 90%;
+    max-width: 25rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding-top: 1rem;
+    animation: luces 6s infinite;
+    transition: all .4s;
+    ul{
+        position: relative;
+        bottom: 1rem;
+    }
+    img{
+        width: 15rem;
+    }
+  }
+
+  .stats{
+    color: black;
+    text-shadow: 2px 2px 7px rgb(255, 253, 253);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(https://i.pinimg.com/736x/6e/52/e0/6e52e0a37e4194b7766ffbde181a0434.jpg);
+    background-size: cover;
+    max-width: 20rem;
+    margin: auto;
+    margin-top: 2rem;
+    border-radius: 10%;
+    transition: all .5s;
+  }
+  .name-details:hover{
+    transform: scale(1.1);
+  }
+  .hability:hover,
+  .stats:hover{
+    transform: scale(1.2);
+  }
+  .hability{
+    color: black;
+    text-shadow: 2px 2px 7px rgb(255, 253, 253);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 20rem;
+    background-image: url(https://i.pinimg.com/736x/6e/52/e0/6e52e0a37e4194b7766ffbde181a0434.jpg);
+    background-size: cover;
+    margin: auto;
+    margin-top: 2rem;
+    border-radius: 10%;
+    transition: all .5s;
+  }
+  .moves{
+    max-width: 30rem;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 2rem;
+    border: 2px solid;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    h3{
+    text-shadow: $shadowtext;
+    color: $color-ligth;
+    }
+     ul{
+        list-style: none;
+        text-align: center;
+        height: 10rem;
+        width: 100%;
+        overflow: auto;
+        li{
+            margin-top: .4rem;
+            border-bottom: 2px solid blue;
+        }
+     }
+ }
+ }
+}
+.statsz{
+display: flex;
+width: 90%;
+align-items: center;
+justify-content: space-around;
+gap:1rem;
+margin: auto;
+li{
+    margin-top: .3rem;
+}
+}
+
+
+.ids{
+    color: rgb(82, 1, 1);
+}
+.title-details{
+    width:100%;
+    max-width: 20rem;
+    margin: auto;
+    display: flex;
+}
+
+@media screen and (min-width:450px){
+    .home-inicio{
+        background-image: url(https://www.wallpaperflare.com/static/364/185/316/pok%C3%A9mon-pok%C3%A9-balls-artwork-pokeball-wallpaper.jpg);
+        .user{
+            flex-direction: row;
+        }
+    }
+    .box-cards{
+        grid-template-columns: 2fr 2fr;
+    }
+    .characters-pages{
+        .buttons-pages{
+        flex-direction: row;
+    }
+    }
+    
+}
+@media screen and (min-width:800px){
+    .box-cards{
+        grid-template-columns: 2fr 2fr 2fr;
+    }
+}
+@media screen and (min-width:1000px){
+    .box-cards{
+        grid-template-columns: 2fr 2fr 2fr 2fr;
+    }
+}
