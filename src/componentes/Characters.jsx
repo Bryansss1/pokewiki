@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { joinPaths } from '@remix-run/router';
+import Swal from "sweetalert2"
 
 const Characters = () => {
     const selectPoke=useSelector(state=>state.pokeselect)
@@ -16,6 +17,7 @@ const Characters = () => {
     const[type0,setType]=useState([])
     const [fullpoke,setPokefull]=useState([])
     const [darkmode,setdarkmode]=useState(true)
+    const userState=useSelector(state=>state.Login)
 
     useEffect(()=>{
         axios.get("https://pokeapi.co/api/v2/pokemon/")
@@ -29,6 +31,17 @@ const Characters = () => {
             setdarkmode(JSON.parse(darkk))
         }
 },[])
+
+
+const mostrarName=()=>{
+    Swal.fire({
+        imageUrl:"https://www.wallpaperflare.com/static/364/185/316/pok%C3%A9mon-pok%C3%A9-balls-artwork-pokeball-wallpaper.jpg",
+        imageHeight:200,
+        html:`Welcome to the pokeapi <b>"${userState}"</b> this includes all pokemon , creator by bryansss :3 <a href="https://github.com/Bryansss1?tab=repositories" target="_blank" ><i class='bx bxl-github bx-md'></i></a>`,
+        confirmButtonColor:"green",
+    })
+}
+
 
 useEffect(()=>{
 localStorage.setItem("dark",JSON.stringify(darkmode))
@@ -75,7 +88,7 @@ const pageButton=pageNumber.slice(firstbutton,lastbutton)
                         <li className='darkmode' onClick={()=>{setdarkmode(!darkmode)}}>{darkmode?<i className='bx bx-sun'></i>:<i className='bx bx-moon' ></i>}</li>
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/characters">Characters</Link></li>
-                        <li><Link>About us</Link></li>
+                        <li><Link onClick={mostrarName}>About us</Link></li>
                     </ul>
 
                     <article className='buscador-nav'>
