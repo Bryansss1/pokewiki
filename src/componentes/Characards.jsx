@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { changePoke } from '../store/slices/pokeselect.slices';
 
-const Characards = ({url}) => {
+const Characards = ({url,darkmode}) => {
 
 const dispatchzz=useDispatch()
 const [chara,setCh]=useState({})
@@ -27,7 +27,7 @@ const Select=(data)=>{
 console.log(pokeselec)
 console.log(chara)
     return (
-        <ul className='card-poke'>
+        <ul className='card-poke' style={{border:`${darkmode?"4px solid black":""}`}}>
             <li>
                 <h3>{chara.name} <span className='ids'>ID:</span>{chara.id}</h3>
                 <p>Pokemon type:{chara.types?.[0].type.name} {chara.types?.[1]?.type.name}</p>

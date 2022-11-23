@@ -114,7 +114,7 @@ const pageButton=pageNumber.slice(firstbutton,lastbutton)
                         <article className='box-cards'>
                                  {pagess.map(chara=>{
                                     return(
-                                        <Characards key={chara.url} url={chara.url}/>
+                                        <Characards darkmode={darkmode} key={chara.url} url={chara.url}/>
                                     )
                                  })}
                         </article>

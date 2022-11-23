@@ -38,6 +38,8 @@ console.log(detailChara)
 
             <img className='title-details' src="https://www.freepnglogos.com/uploads/gotta-catch-em-all-transparent-pokemon-logo-11.png"/>
             <article className='details'>
+
+                <div className='name-moves'>
                 <div className='name-details'>
                 <h3><i className='bx bxs-disc'></i>{detailChara.name} <span className='ids'>ID:</span>{detailChara.id}</h3>
                 <p>Pokemon type:{detailChara.types?.[0].type.name} {detailChara.types?.[1]?.type.name}</p>
@@ -47,10 +49,23 @@ console.log(detailChara)
                 <li>Height:{detailChara.height} Decimetres</li>
                 <li>weight:{detailChara.weight} Hectograms</li>
                 </ul>
+
+                </div>
+                
+                <div className='moves'>
+                <h3>ALL moves</h3>
+                <ul>
+                {detailChara.moves?.map((move,index)=>{
+                    return(
+                         <li key={index}>{move.move.name}</li>
+                    )
+                })}
+                </ul>
+                </div> 
+
                 </div>
 
                 <div className='statsz'>
-
                 <div className='stats'>
                     <h3>stats <i className='bx bx-dumbbell'></i></h3>
                     <ul>
@@ -72,17 +87,6 @@ console.log(detailChara)
                     </div>
                     
                     </div>
-
-                <div className='moves'>
-                <h3>ALL moves</h3>
-                <ul>
-                {detailChara.moves?.map((move,index)=>{
-                    return(
-                         <li key={index}>{move.move.name}</li>
-                    )
-                })}
-                </ul>
-                </div> 
 
             </article>
         </section>
