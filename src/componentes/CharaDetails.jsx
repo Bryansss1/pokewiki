@@ -4,14 +4,24 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { setLoading } from '../store/slices/isLoading.slice';
 
 const CharaDetails = () => {
+
     const {id}=useParams()
     const[detailChara,setCharade]=useState({})
+    const dispatchzz=useDispatch()
+
 
 useEffect(()=>{
+
+dispatchzz(setLoading(true))
 axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
 .then(res=>setCharade(res.data))
+.finally(()=>dispatchzz(setLoading(false)))
+
 },[])
 
 const mostrarName=()=>{

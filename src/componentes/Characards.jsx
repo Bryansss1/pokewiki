@@ -5,18 +5,22 @@ import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { setLoading } from '../store/slices/isLoading.slice';
 import { changePoke } from '../store/slices/pokeselect.slices';
 
 const Characards = ({url,darkmode}) => {
 
+const loading=useSelector(state=>state.loading)
 const dispatchzz=useDispatch()
 const [chara,setCh]=useState({})
 const pokeselec=useSelector(state=>state.pokeselect)
 const navigateez=useNavigate()
 
 useEffect(()=>{
+dispatchzz(setLoading(true))
 axios.get(url)
 .then(res=>setCh(res.data))
+.finally(()=>dispatchzz(setLoading(false)))
 },[])
 
 const Select=(data)=>{

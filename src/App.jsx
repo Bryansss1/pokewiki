@@ -10,14 +10,19 @@ import CharaDetails from './componentes/CharaDetails'
 import ProtectedRoutes from './componentes/RouteProtect'
 import HomeUser from './componentes/HomeUser'
 import "./styles/App.scss"
-
+import Loading from './componentes/Loading'
+import { useSelector } from 'react-redux'
 
 function App() {
  
+const loading=useSelector(state=>state.loading)
+
 
   return (
       <HashRouter>
         <div className="App">
+          
+          {loading&&<Loading/>}
        
       <Routes>
 
