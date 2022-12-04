@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import { joinPaths } from '@remix-run/router';
 import Swal from "sweetalert2"
 
+
 const Characters = () => {
     const selectPoke=useSelector(state=>state.pokeselect)
     const [characterss,setChara]=useState([])
@@ -107,7 +108,8 @@ const pageButton=pageNumber.slice(firstbutton,lastbutton)
                             })}
                         </select>
                     </form>
-                    </article>
+
+                    </article> 
                 </nav>
                     
                 <section>

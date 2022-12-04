@@ -7,9 +7,10 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { setLoading } from '../store/slices/isLoading.slice';
-
+import Swal from 'sweetalert2';
 const CharaDetails = () => {
 
+    const userState=useSelector(state=>state.Login)
     const {id}=useParams()
     const[detailChara,setCharade]=useState({})
     const dispatchzz=useDispatch()
@@ -91,8 +92,8 @@ console.log(detailChara)
                     <div className='hability'>
                 <h3>Hability <i className='bx bx-sort-up'></i></h3>
                 <ul >
-                    <li>{detailChara.abilities?.[0].ability.name}</li>
-                    <li>{detailChara.abilities?.[1].ability.name}</li>
+                    <li>{detailChara?.abilities?.[0]?.ability.name}</li>
+                    <li>{detailChara?.abilities?.[1]?.ability.name}</li>
                 </ul>
                     </div>
                     
