@@ -6,8 +6,8 @@ import Characards from './Characards';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { joinPaths } from '@remix-run/router';
 import Swal from "sweetalert2"
+import Autocomplete from './Autocomplete';
 
 
 const Characters = () => {
@@ -94,7 +94,7 @@ const pageButton=pageNumber.slice(firstbutton,lastbutton)
 
                     <article className='buscador-nav'>
                         <div className='pokebuss'>
-                        <h2>Search Pokemon in Details</h2>
+                        <h2>Search Pokemons</h2>
                         <img className='pokebus' src='http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/0bf759ddc6e7fc9.png'/>
                         </div>
                     <form className='pokeform' action="" onSubmit={submint}>
@@ -107,6 +107,7 @@ const pageButton=pageNumber.slice(firstbutton,lastbutton)
                                 )
                             })}
                         </select>
+                        {searchPoke&&<Autocomplete changee={setSerch} pokemons={fullpoke} searchInput={searchPoke}/>}
                     </form>
 
                     </article> 

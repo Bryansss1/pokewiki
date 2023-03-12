@@ -49,7 +49,7 @@ if(data){
 
                 </div>
                 <form action="" onSubmit={submintgo}>
-                    <input type="text" value={Login} onChange={(e)=>setLogin(e.target.value)}/>
+                    <input placeholder='name' type="text" value={Login} onChange={(e)=>setLogin(e.target.value)}/>
                     {userState!==""? <button type='button'><Link className='nochangeName' to="/characters">NO,chill</Link> </button>:""}
                     <button>Ready?</button>
                 </form>
